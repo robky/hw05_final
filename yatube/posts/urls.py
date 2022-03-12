@@ -1,8 +1,9 @@
-from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import (index, group_posts, profile, post_detail, post_create,
-                    post_edit, add_comment, follow_index, profile_follow,
+from django.urls import path
+
+from .views import (add_comment, follow_index, group_posts, index, post_create,
+                    post_detail, post_edit, profile, profile_follow,
                     profile_unfollow)
 
 app_name = 'posts'

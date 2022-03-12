@@ -1,8 +1,8 @@
 from django.contrib.auth import get_user_model
 from factory import Faker as boy_Faker
 from factory.django import DjangoModelFactory
-from posts.models import Post, Group
 
+from posts.models import Group, Post
 
 User = get_user_model()
 

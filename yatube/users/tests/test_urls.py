@@ -1,7 +1,8 @@
 from collections import namedtuple
-
-from django.test import TestCase, Client
 from http import HTTPStatus
+
+from django.test import Client, TestCase
+
 from posts.tests.factorys import UserFactory
 
 urls = namedtuple('urls', ['address', 'template'])

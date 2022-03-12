@@ -1,11 +1,13 @@
 import shutil
 import tempfile
 from http import HTTPStatus
+
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import Client, TestCase, override_settings
-from posts.models import Post, Comment
-from posts.tests.factorys import UserFactory, PostFactory
+
+from posts.models import Comment, Post
+from posts.tests.factorys import PostFactory, UserFactory
 
 TEMP_MEDIA_ROOT = tempfile.mkdtemp(dir=settings.BASE_DIR)
 

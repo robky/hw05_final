@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
+
 from posts.models import FIRST_SYMBOL_TITLE
 from posts.tests.factorys import GroupFactory, PostFactory, UserFactory
 

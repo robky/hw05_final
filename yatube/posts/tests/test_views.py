@@ -2,14 +2,16 @@ import shutil
 import tempfile
 from collections import namedtuple
 from http import HTTPStatus
-from django.core.cache import cache
+
 from django import forms
 from django.conf import settings
+from django.core.cache import cache
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import Client, TestCase, override_settings
 from django.urls import reverse
+
 from posts.tests.factorys import GroupFactory, PostFactory, UserFactory
-from posts.views import FIRST_SYMBOL_POST, LIMIT_POSTS, CACHE_SEC
+from posts.views import CACHE_SEC, FIRST_SYMBOL_POST, LIMIT_POSTS
 
 TEMP_MEDIA_ROOT = tempfile.mkdtemp(dir=settings.BASE_DIR)
 urls = namedtuple('urls', ['address', 'args', 'template'])
