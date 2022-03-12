@@ -1,0 +1,9 @@
+{% extends 'base_auth.html' %}
+{% block title %}Войти{% endblock title %}
+{% block card_header %}Войти на сайт{% endblock card_header %}
+{% block button_name %}Войти{% endblock button_name %}
+{% block link_more %}
+  <a href="{% url 'users:password_reset' %}" class="btn btn-link">
+    Забыли пароль?
+  </a>
+{% endblock link_more %}

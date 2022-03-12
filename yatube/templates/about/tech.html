@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+  {% load static %}
+  <div class="row">
+  <h1>Техническая сторона</h1>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <img src="{% static 'img/tech_logo/sql.png' %}" width="60"
+                 alt="logo SQL">
+            SQL
+          </li>
+          <li class="list-group-item">
+            <img src="{% static 'img/tech_logo/python.png' %}" width="60"
+                 alt="logo python">
+            Pyton
+          </li>
+          <li class="list-group-item">
+            <img src="{% static 'img/tech_logo/dj.png' %}" width="60"
+                 alt="logo django">
+            Django
+          </li>
+          <li class="list-group-item">
+            <img src="{% static 'img/tech_logo/git.png' %}" width="60"
+                 alt="logo Git">
+            Git
+          </li>
+          <li class="list-group-item">
+            <img src="{% static 'img/tech_logo/github.png' %}" width="60"
+                 alt="logo GitHub">
+            GitHub
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-9 gx-5">
+        <div class="my_text_indent">
+          <p>Полученные знания по SQL дают понимание построение запросов.
+            Полученные знания по Python дают правильное применение синтаксиса в
+            «бизнес-логике». Полученные знания по Django позволяет использовать
+            MVC
+            (model-view-controller) во всей красе.
+          </p>
+          <p>Полученные знания по Git дают возможность писать код не
+            задумываясь о «последствиях», потому что у
+            тебя в руках твоя личная «машина времени». А сервис GitHub
+            позволяет (в
+            моем случае) не напрягаясь использовать разные «рабочие места».
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

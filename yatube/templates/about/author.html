@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+  {% load static %}
+  <div class="container">
+    <h1>Привет, я автор</h1>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <img src="{% static 'img/site_author.jpg' %}" class="img-fluid"
+             alt="Site author">
+      </div>
+
+      <div class="col-12 col-md-6 gx-5">
+        <div class="my_text_indent">
+          <p>
+            Привет-привет. Меня зовут Павел, мне 38 лет и живу я в городе
+            Оренбурге. Сейчас я работаю инженером в элетктросетевой компании.
+            Решил кардинально изменить свою жизнь и сменить профессию.
+          </p>
+          <p>
+            Благодарю «Практикум» за этот цифровой «омут», в который я
+            «окунулся» с головой.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<p></p>
+{% endblock %}
