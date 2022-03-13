@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import CommentForm, PostForm
 from .models import Group, Post
+from core.utils import query_debugger
 
 LIMIT_POSTS = 10
 FIRST_SYMBOL_POST = 30
@@ -27,7 +28,7 @@ def index(request):
     }
     return render(request, template, context)
 
-
+@query_debugger
 def group_posts(request, slug):
     template = 'posts/group_list.html'
     group = get_object_or_404(Group, slug=slug)

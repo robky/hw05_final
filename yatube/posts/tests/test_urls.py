@@ -17,7 +17,7 @@ class PostURLTests(TestCase):
         cls.group = GroupFactory.create()
         cls.post = PostFactory.create(author=cls.author, group=cls.group)
 
-        cls.un_existing_urls = (urls('/un_existing_page/', ''), )
+        cls.un_existing_urls = (urls('/un_existing_page/', 'core/404.html'), )
         cls.public_urls = (
             urls('/', 'posts/index.html'),
             urls(f'/group/{cls.group.slug}/', 'posts/group_list.html'),

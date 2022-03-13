@@ -15,6 +15,10 @@ class Group(models.Model):
     def __str__(self) -> str:
         return self.title
 
+    class Meta:
+        verbose_name = 'Группу'
+        verbose_name_plural = 'Группы'
+
 
 class Post(models.Model):
     text = models.TextField(
