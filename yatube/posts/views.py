@@ -28,6 +28,7 @@ def index(request):
     }
     return render(request, template, context)
 
+
 @query_debugger
 def group_posts(request, slug):
     template = 'posts/group_list.html'

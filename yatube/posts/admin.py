@@ -23,6 +23,7 @@ class GroupAdmin(admin.ModelAdmin):
     search_fields = ('title', 'descriptions')
     empty_value_display = '-пусто-'
 
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'author', 'text')
     search_fields = ('text', )
