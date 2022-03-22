@@ -3,6 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, redirect, render
 
+from core.utils import query_debugger
+
 from .forms import CommentForm, PostForm
 from .models import Group, Post
 from core.utils import query_debugger
@@ -53,9 +55,8 @@ def profile(request, username):
     paginator = Paginator(posts, LIMIT_POSTS)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    #following = False
-    #if request.user.is_authenticated:
-    following = request.user.follower.filter(author=user).exists()
+    following = (request.user.is_authenticated
+                 and request.user.follower.filter(author=user).exists())
     context = {
         'title': title,
         'author': user,
