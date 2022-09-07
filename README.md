@@ -6,7 +6,7 @@
 
 ### Технологии
 Python 3.7
-Django 2.2.16
+Django 2.2.28
 Pytest-django
 
 ### Как запустить проект:
